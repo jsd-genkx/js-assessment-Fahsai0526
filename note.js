@@ -12,7 +12,7 @@ const fieldCharacter = "░";
 const pathCharacter = "*";
 
 class Field {
-    constructor(field = [[]]) {
+    constructor(field = []) {
         this.field = field;
 
         // Replace with your own code //
@@ -23,55 +23,45 @@ class Field {
     }
 
     // Print field 
-	print() {
-		for (let field of this.field) {
-			console.log(field);
-	}
-			// const command = prompt("Which way? ");
-            // console.log(`your direction ${command}`);
-	};
-    playGame() { 
+        print() { 
         // ทำให้รับ input ได้
         while(true){
-            const command = prompt("Which way? ");
-            console.log(`your direction ${command}`);
+            const command = prompt("input :");
+            console.log(`your input ${command}`);
         
         // ทำให้เดินได้
             if(command === "r") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
+            console.log(this.positionRow);
+            console.log(this.positionCol);
             this.moveRight();
-            // console.log(this.positionCol);
+            console.log(this.positionCol);
             }
             else if(command === "l") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
+            console.log(this.positionRow);
+            console.log(this.positionCol);
             this.moveLeft();
-            // console.log(this.positionCol);
+            console.log(this.positionCol);
             }
             else if(command === "u") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
+            console.log(this.positionRow);
+            console.log(this.positionCol);
             this.moveUp();
-            // console.log(this.positionRow)
+            console.log(this.positionRow);
             }
             else if(command === "d") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
+            console.log(this.positionRow);
+            console.log(this.positionCol);
             this.moveDown();
-            // console.log(this.positionRow);
+            console.log(this.positionRow);
             } else {
                 console.log("you did not move correctly");
             }
-			console.log(this.field[this.positionRow][this.positionCol])
-            this.field[this.positionRow][this.positionCol] = pathCharacter;
 
-		
+            this.field[this.positionRow][this.positionCol] = pathCharacter;
         // clear();
         // Replace with your own code //
-       this.print(); // Please REMOVE this line before you start your code!
-    
-	}
+        console.log(this.field); // Please REMOVE this line before you start your code!
+    }
     }
     // movement function
     moveRight() {
@@ -87,13 +77,6 @@ class Field {
         this.positionRow++;
     }
     // กำหนดเงื่อนไข แพ้/ชนะ
-	// Rule() {
-	// 	if(pathCharacter === hat) {
-	// 	console.log("You Win !");
-	// } else if(pathCharacter === hole) {
-	// 	console.log("Game Over !");
-	// } else if() {}
-
 
     // Your Code //
 }
@@ -105,4 +88,3 @@ const newGame = new Field([
     ["░", "^", "░"],
 ]);
 newGame.print();
-newGame.playGame();
