@@ -131,10 +131,10 @@
 
 ### Thinking Process
 
-1. // ทำให้รับค่า input ได้
-2. // ทำให้เดินได้ >>ใช้ if else สร้างเงื่อนไขการเดิน
-3. // create field
-4. // ใส่เงื่อนไขกำหนดแพ้ชนะRE
+1. ทำให้รับค่า input ได้ >> copy การใช้ promptSync จาก google ใส่ข้อความถาม direction เมื่อ player ใส่ input
+2. ทำให้เดินได้ >>ใช้ else if สร้างเงื่อนไขการเดิน โดยสร้าง function movement แยกออกมา และเรียกใช้
+3. create field >> ใช้ for..of เพื่อทำแถว array แนวตั้ง และ Print field ออกมา
+4. ใส่เงื่อนไขกำหนดแพ้ชนะ >> สร้างเงื่อนไขโดยเช็คตำแหน่งล่าสุดของ \* กำหนดข้อความตามกฎของเกม
 
 _Notes:_<br>
 _- You can attach flowcharts, diagrams, and images as needed._<br>
