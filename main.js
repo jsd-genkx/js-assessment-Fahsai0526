@@ -27,50 +27,49 @@ class Field {
 		for (let field of this.field) {
 			console.log(field);
 	}
-			// const command = prompt("Which way? ");
-            // console.log(`your direction ${command}`);
 	};
     playGame() { 
         // ทำให้รับ input ได้
         while(true){
             const command = prompt("Which way? ");
             console.log(`your direction ${command}`);
-        
+
         // ทำให้เดินได้
             if(command === "r") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
             this.moveRight();
-            // console.log(this.positionCol);
             }
             else if(command === "l") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
             this.moveLeft();
-            // console.log(this.positionCol);
             }
             else if(command === "u") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
             this.moveUp();
-            // console.log(this.positionRow)
             }
             else if(command === "d") {
-            // console.log(this.positionRow);
-            // console.log(this.positionCol);
             this.moveDown();
-            // console.log(this.positionRow);
             } else {
                 console.log("you did not move correctly");
             }
+
+		// กำหนดเงื่อนไข แพ้/ชนะ
+			if (this.positionRow < 0 || this.positionRow >= this.field.length || this.positionCol < 0 || this.positionCol >= this.field[0].length) {
+  		console.log('Out of field! Game Over.');
+ 		 break;
+		}
+		if (this.field[this.positionRow][this.positionCol] === hat) {
+ 		 console.log('You found your hat! You win!');
+  		break;
+		}
+		if (this.field[this.positionRow][this.positionCol] === hole) {
+  		console.log('You fell in a hole! Game Over.');
+  		break;
+		}
 			console.log(this.field[this.positionRow][this.positionCol])
             this.field[this.positionRow][this.positionCol] = pathCharacter;
 
-		
         // clear();
         // Replace with your own code //
        this.print(); // Please REMOVE this line before you start your code!
-    
+   
 	}
     }
     // movement function
@@ -86,13 +85,6 @@ class Field {
     moveDown() {
         this.positionRow++;
     }
-    // กำหนดเงื่อนไข แพ้/ชนะ
-	// Rule() {
-	// 	if(pathCharacter === hat) {
-	// 	console.log("You Win !");
-	// } else if(pathCharacter === hole) {
-	// 	console.log("Game Over !");
-	// } else if() {}
 
 
     // Your Code //
