@@ -131,10 +131,10 @@
 
 ### Thinking Process
 
-1. // step 1
-2. // step 2
-3. // ...
-4. // step n
+1. // ทำให้รับค่า input ได้
+2. // ทำให้เดินได้ >>ใช้ if else สร้างเงื่อนไขการเดิน
+3. // กำหนดไม่ให้เดินเลยกรอบ
+4. // ใส่เงื่อนไขกำหนดแพ้ชนะRE
 
 _Notes:_<br>
 _- You can attach flowcharts, diagrams, and images as needed._<br>
